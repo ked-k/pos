@@ -384,3 +384,11 @@
 #21 C:\\wamp64\\www\\ked\\pos\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #22 {main}
 "} 
+[2026-06-14 20:05:14] local.ERROR: Cannot use isset() on the result of an expression (you can use "null !== expression" instead) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use isset() on the result of an expression (you can use \"null !== expression\" instead) at C:\\wamp64\\www\\ked\\pos\\storage\\framework\\views\\b669db2ed21dcb8f255ac707ade9a098656ae24b.php:65)
+[stacktrace]
+#0 C:\\wamp64\\www\\ked\\pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(255): Symfony\\Component\\ErrorHandler\\Error\\FatalError->__construct(message: ''Cannot use iss...', code: '0', error: '['type' => 64, ...', traceOffset: '0', traceArgs: '???', trace: '???')
+#1 C:\\wamp64\\www\\ked\\pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(242): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->fatalErrorFromPhpError(error: '['type' => 64, ...', traceOffset: '0')
+#2 C:\\wamp64\\www\\ked\\pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(266): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#3 C:\\wamp64\\www\\ked\\pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(0): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure:C:\\wamp64\\www\\ked\\pos\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php:265-267}()
+#4 {main}
+"} 
