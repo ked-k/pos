@@ -3,14 +3,12 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AccountReportsController;
 use App\Http\Controllers\AccountTypeController;
-// use App\Http\Controllers\Auth;
 use App\Http\Controllers\BackUpController;
 use App\Http\Controllers\BarcodeController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\BusinessLocationController;
 use App\Http\Controllers\CashRegisterController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CombinedPurchaseReturnController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CustomerGroupController;
@@ -59,6 +57,7 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VariationTemplateController;
 use App\Http\Controllers\WarrantyController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,6 +75,7 @@ include_once 'install_r.php';
 
 Route::middleware(['setData'])->group(function () {
     Route::get('/', function () {
+        return redirect()->route('login');
         return view('welcome');
     });
 
@@ -474,7 +474,7 @@ Route::middleware(['setData', 'auth', 'SetSessionData', 'language', 'timezone', 
     Route::resource('warranties', WarrantyController::class);
 
     Route::resource('dashboard-configurator', DashboardConfiguratorController::class)
-    ->only(['edit', 'update']);
+        ->only(['edit', 'update']);
 
     Route::get('view-media/{model_id}', [SellController::class, 'viewMedia']);
 
